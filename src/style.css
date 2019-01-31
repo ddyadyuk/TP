@@ -1,4 +1,140 @@
 body {
+    display: block;
     color: #762731;
     height: 100px;
+}
+.first {
+    color: #638212;
+    background-color: #773213;
+    font-style: italic;
+    font-size: 20px;
+}
+.second {
+    color: #673262;
+    background-color: #882722;
+    font-style: italic;
+    font-size: 28px;
+
+}
+.third {
+    color: #774322;
+    background-color: #123342;
+    font-style: italic;
+    font-size: 22px;
+}
+.fourth {
+    color: #345662;
+    background-color: #342112;
+    font-style: italic;
+    font-size: 15px;
+}
+.fifth {
+    color: #994221;
+    background-color: #821321;
+    font-style: italic;
+    font-size: 25px;
+}
+.sixth {
+    color: #553311;
+    background-color: wheat;
+    font-style: italic;
+    font-size: 25px;
+}
+.firstP {
+    border-bottom: 1px solid blue;
+}
+.secondP {
+    border: 1px dotted navy;
+}
+.thirdP {
+    border:2px dotted violet;
+}
+.fourthP {
+    border-left:3px dashed crimson;
+}
+.fifthP {
+    border-right: 1px dashed darkgreen;
+}
+.i {
+    color: #445212;
+}
+.em {
+    color: #998761;
+}
+.strong {
+    color: #334422;
+}
+.b  {
+    color: #334557;
+}
+
+
+.firstA:hover {
+    background-color:lawngreen;
+}
+.secondA:hover {
+    background-color:orangered;
+    under-line: 3px dotted purple;
+}
+.thirdA:hover {
+    color: purple;
+}
+.fourthA:hover {
+    color: deeppink;
+}
+.fifthA:hover {
+    color: blue;
+    display: inline;
+    border-bottom: 2px solid purple;
+}
+.li1 {
+    padding-left: 20px;
+    margin-top: 10px;
+    list-style-type: circle;
+}
+.li2 {
+    margin-top: 15px;
+    padding-left: 30px;
+    list-style-type: lower-alpha;
+}
+.l3 {
+    margin-left: 10px;
+    margin-top:25px;
+    list-style-type: square;
+}
+.trump {
+    border-radius: 50%;
+    opacity: 0.8;
+    border: 5px solid pink;
+}
+.db {
+    border-radius: 50%;
+    box-shadow: 5px 10px 2px 5px rgba(0, 140, 186, 0.5);
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.tr {
+    background-color: forestgreen;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+
+}
+
+td:nth-child(even) {
+    width: 35px;
+}
+
+.target {
+    background-color: royalblue;
 }
