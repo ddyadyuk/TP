@@ -23,15 +23,16 @@ body {
 .same:hover{
     color: darkgrey;
 }
-.grid {
-    display: grid;
-    grid-column-gap: 40px;
-    grid-template-columns: 3fr 1fr;
-}
+
 .gameWindow {
     display: none;
     width: 90%;
     margin: 50px 30px auto auto ;
+}
+.grid {
+    display: grid;
+    grid-column-gap: 40px;
+    grid-template-columns: 3fr 1fr;
 }
 .workWindow{
     height: 600px;
