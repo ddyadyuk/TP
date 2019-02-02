@@ -14,20 +14,18 @@ $(document).ready(function () {
 
             var getValue = function (valueName) {
                 return values[valueName];
-            }
-            var radio = getValue("radio");
+            };
+            var radio = getValue("checkbox");
             var text = getValue("Text");
             var color = getValue("Color");
 
-            if(radio === $("form.p:first-child")){
+            if($("input:checkbox").prop("checked") === true){
                 $(".workWindow").prepend('<p '+'style="background-color:'+color+'; " '+'>' + text +'</p>');
             } else {
                 $(".workWindow").append('<p '+'style="background-color:'+color+'; " '+'>' + text +'</p>');
             }
+
         });
 
 
-    // $("button").click(function () {
-    //     $(".workWindow").append('<p>'+$("#formFirst").serialize() + +'</p>' + '<br/>');
-     //})
 });
