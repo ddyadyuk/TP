@@ -38,6 +38,11 @@ body {
     height: 600px;
     background-color: gainsboro;
 }
+.thirdGameWindow{
+    display: none;
+    width: 90%;
+    margin: 50px 30px auto auto ;
+}
 .grid {
     display: grid;
     grid-column-gap: 40px;
@@ -56,5 +61,13 @@ body {
     border:3px solid black;
 }
 .secondWorkWindow{
+    overflow: hidden;
+}
+
+.thirdWorkWindow{
+    height: 600px;
+    background-color: gainsboro;
+}
+.thirdWorkWindow{
     overflow: hidden;
 }

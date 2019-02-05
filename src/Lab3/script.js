@@ -76,4 +76,47 @@ $(document).ready(function () {
             }
         }
     });
+
+    $(".thirdButton").click(function () {
+        $(".thirdGameWindow").addClass("grid");
+    });
+    $(".createDraggable").click(function () {
+        var colorsArray = ["red", "white", "blue", "orange", "black", "darkgrey", "darkcyan", "gainsboro", "blueviolet", "mediumspringgreen", "firebrick", "purple", "hotpink", "aqua", "royalblue"];
+        var currentColor = 0;
+        while (currentColor === 0) {
+            var ii = Math.floor((Math.random() * colorsArray.length));
+            currentColor = colorsArray[ii];
+        }
+        var divWidth = $(".thirdWorkWindow").width();
+        var divHeight = $(".thirdWorkWindow").height();
+        var absolute = "relative";
+        var randPosX = Math.floor(Math.random() * divWidth);
+        var randPosY = Math.floor((Math.random()) * divHeight);
+        for (var i = 1; i <= 1; i++) {
+            if ($("div").is(".createdDraggable")) {
+                $(".createdDraggable").remove();
+            }
+            $(".thirdWorkWindow").append('<div class="createdDraggable" draggable="true" ondragstart="drag(event)" ></div>');
+            $(".createdDraggable").css('left', randPosX);
+            $(".createdDraggable").css("top", randPosY);
+            $(".createdDraggable").css("background-color", currentColor);
+            $(".createdDraggable").css("height", Math.floor(Math.random() * 150));
+            $(".createdDraggable").css("width", Math.floor(Math.random() * 300));
+            $(".createdDraggable").css("position", absolute);
+
+        }
+    });
+
+    function drag (event) {
+        event.dataTransfer.setData("text", event.target.id);
+    }
+
+    function allowDrop (ev) {
+        ev.preventDefault();
+    }
+    function drop (ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
 });
