@@ -248,6 +248,7 @@ body {
         border-radius: 50% ;
     }
     .topnav a:not(:first-child) {display: none;}
+
     .topnav a.icon {
         float: right;
         display: block;

@@ -93,30 +93,22 @@ $(document).ready(function () {
         var randPosX = Math.floor(Math.random() * divWidth);
         var randPosY = Math.floor((Math.random()) * divHeight);
         for (var i = 1; i <= 1; i++) {
-            if ($("div").is(".createdDraggable")) {
-                $(".createdDraggable").remove();
+            if ($("div").is(".ui-widget-content")) {
+                $(".ui-widget-content").remove();
             }
-            $(".thirdWorkWindow").append('<div class="createdDraggable" draggable="true" ondragstart="drag(event)" ></div>');
-            $(".createdDraggable").css('left', randPosX);
-            $(".createdDraggable").css("top", randPosY);
-            $(".createdDraggable").css("background-color", currentColor);
-            $(".createdDraggable").css("height", Math.floor(Math.random() * 150));
-            $(".createdDraggable").css("width", Math.floor(Math.random() * 300));
-            $(".createdDraggable").css("position", absolute);
+            $(".thirdWorkWindow").append('<div class= "ui-widget-content" id="createdDraggable"></div>');
+            $(".ui-widget-content").css('left', randPosX);
+            $(".ui-widget-content").css("top", randPosY);
+            $(".ui-widget-content").css("background-color", currentColor);
+            $(".ui-widget-content").css("height", Math.floor(Math.random() * 150));
+            $(".ui-widget-content").css("width", Math.floor(Math.random() * 300));
+            $(".ui-widget-content").css("position", absolute);
 
         }
+        $( function() {
+            $( ".ui-widget-content" ).draggable();
+        } );
+
     });
 
-    function drag (event) {
-        event.dataTransfer.setData("text", event.target.id);
-    }
-
-    function allowDrop (ev) {
-        ev.preventDefault();
-    }
-    function drop (ev) {
-        ev.preventDefault();
-        var data = ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));
-    }
 });

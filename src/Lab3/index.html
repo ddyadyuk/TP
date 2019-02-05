@@ -5,17 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Third lab</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="script.js" >
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="script.js"></script>
-    <script>
-        function dragStart(ev) {
-            ev.dataTransfer.effectAllowed='move';
-            ev.dataTransfer.setData("Text", ev.target.getAttribute('class'));   ev.dataTransfer.setDragImage(ev.target,100,100);
-            return true;
-        }
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    </script>
 </head>
 <body>
     <div class="mainWrapper">
@@ -47,13 +41,15 @@
         </div>
         <div class="thirdGameWindow">
             <div class="thirdWindowWrapper">
-                <div class="thirdWorkWindow" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="thirdWorkWindow"></div>
             </div>
             <div class="thirdFormWrapper">
                 <button class="createDraggable same">Create</button>
+
             </div>
         </div>
     </div>
 
 </body>
+
 </html>
